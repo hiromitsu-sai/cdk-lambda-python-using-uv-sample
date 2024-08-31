@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug App",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/hello.py",
+      "args": [],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src:${PYTHONPATH}",
+        // "AWS_PROFILE": "default",
+        // "AWS_REGION": "us-east-1"
+      }
+    },
+    {
+      "name": "Run Test",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "unittest",
+      "console": "integratedTerminal",
+      "args": [
+        "discover",
+        "tests",
+        "-v",
+      ],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src:${PYTHONPATH}",
+        // "AWS_PROFILE": "default",
+        // "AWS_REGION": "us-east-1"
+      }
+    },
+    {
+      "name": "Run Check",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "ruff",
+      "console": "integratedTerminal",
+      "args": [
+        "check"
+      ],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src:${PYTHONPATH}",
+        // "AWS_PROFILE": "default",
+        // "AWS_REGION": "us-east-1"
+      }
+    }
+  ]
+}

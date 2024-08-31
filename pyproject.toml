@@ -1,0 +1,15 @@
+[project]
+name = "cdk-lambda-python-using-uv-sample"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aws-cdk-lib>=2.155.0",
+    "boto3>=1.35.10",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.6.3",
+]
